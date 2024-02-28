@@ -4,10 +4,10 @@
 &emsp;
 
 
-Vous pouvez personnaliser vos templates en modifiant les fichiers dans 'model'
+Vous pouvez personnaliser vos templates en modifiant les fichiers dans le dossier `Templates`
 
 &emsp;
-## ⚙️&emsp;Installation ( à 42 )
+## ⚙️&emsp;Installation ( à 42 )&emsp;⚙️
 &emsp;
 1.  Télécharger ou déplacer le repo dans le dossier /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
 
@@ -15,20 +15,22 @@ Vous pouvez personnaliser vos templates en modifiant les fichiers dans 'model'
 
     - /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
 
-4. En fonction de votre shell, exécuter la commande suivante : 
-    - `nano ~/.zsrhc`
-    - `nano ~/.bashrc`
+4. Exécuter la commande suivante :
 
-5. A la fin du fichier, ajouter la ligne suivante pour configurer un alias :
-    - `alias genfile='/sgoinfre/goinfre/Perso/<VOTRE_LOGIN_42>/cpp_FileGenerator/genfile.sh'`
+       nano ~/.zsrhc
 
-6. Enregistrer et quitter l'éditeur avec ctrl+X, Y, Enter
+6. A la fin du fichier, ajouter la ligne suivante pour configurer un alias :
+
+       alias genfile='/sgoinfre/goinfre/Perso/<VOTRE_LOGIN_42>/cpp_FileGenerator/genfile.sh'
+
+8. Enregistrer et quitter l'éditeur avec ctrl+X, Y, Enter
    
-7. Relancer un nouveau terminal ou exécuter la commande suivante :
-    - `source ~/.zsrhc`
+9. Relancer un nouveau terminal ou exécuter la commande suivante :
+
+       source ~/.zsrhc
 
 &emsp;
-##  🛠️&emsp;Utilisation
+##  🛠️&emsp;Utilisation&emsp;🛠️
 &emsp;
 Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suivantes :
 - `c` :&emsp;&emsp;Crée un fichier .cpp.
@@ -41,7 +43,7 @@ Le programme ajuste automatiquement la première lettre du nom de fichier pour l
 &emsp;
 
 &emsp;
-## 💡&emsp;Exemple
+## 💡&emsp;Exemple&emsp;💡
 
 Pour créer un fichier MaClasse, vous pouvez utiliser les commandes suivantes :
 
