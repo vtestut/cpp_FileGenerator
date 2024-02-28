@@ -17,11 +17,12 @@ ${NAME}: ${OBJS}
 	$(CPP) $(FLAGS) ${OBJS} -o $@
 
 clean:
-	rm -rf ${OBJDIR}		
+	@rm -rf ${OBJDIR}		
 
 fclean: clean
-	rm ${NAME}
-#rm -rf output
+	@if [ -f ${NAME} ]; then rm -r ${NAME}; fi
+	@if [ -d "output" ]; then rm -r output; fi
+	@echo "fclean success"
 
 re: fclean ${NAME}
 
