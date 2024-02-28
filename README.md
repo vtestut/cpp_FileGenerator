@@ -68,6 +68,7 @@ Pour créer un fichier MaClasse, vous pouvez utiliser les commandes suivantes :
 - Ajouter une vérification pour check si un fichier du même nom existe déjà, puis demander au user s'il souhaite override.
 - Permettre de créer autant de fichiers que souhaité en une seule fois.
 - Pouvoir choisir entre plusieurs modèles de templates.
+- Directement intégrer l'en-tête 42 du user.
 - Une autre idée ? ou un truc à améliorer ? contact moi sur discord :)
 
 ## Happy coding 🚀
