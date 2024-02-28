@@ -1,0 +1,11 @@
+
+
+#include "XXX.hpp"
+
+//int argc, char **argv
+int main()
+{
+	XXX tmp;
+
+	return (0);
+}
