@@ -27,32 +27,21 @@
 
 
 // Default Constructor
-XXX::XXX( void ) {
-    std::cout << "Default constructor called" << std::endl;
-    return;
-}
+XXX::XXX( void ) {}
 
 // Parametric Constructor
-XXX::XXX(int const p1) : _n(p1) {
-    std::cout << "Parametric constructor called with value " << this->_n << std::endl;
-    return;
-}
+XXX::XXX(int const p1) : _n(p1) {}
 
 //  Copy constructor
 XXX::XXX(XXX const & src) {
-    std::cout << "Copy constructor called" << std::endl;
     *this = src;
-    return;
 }
 
 //  Default Destructor
-XXX::~XXX( void ) {
-    std::cout << "Default destructor called" << std::endl;
-    return;
-}
+XXX::~XXX( void ) {}
 
 /* ************************************************************************** */
-/*									GETTERS									  */
+/*								GETTERS & SETTERS							  */
 /* ************************************************************************** */
 
 // Getter
@@ -67,20 +56,13 @@ int XXX::getValue(void) const {
 
 //  Assignation Operator
 XXX &   XXX::operator=(XXX const & rhs) {
-    std::cout << "Assignation operator called from " << this->_n;
-    std::cout << " to " << rhs.getValue() << std::endl;
-
     this->_n = rhs.getValue();
-
     return *this; // on dereference l'instence pour renvoyer une reference &
 }
 
 //  Addition Operator
 XXX XXX::operator+(XXX const & rhs) const {
-    std::cout << "Addition operator called with " << this->_n;
-    std::cout << " and " << rhs.getValue() << std::endl;
-
-    return XXX( this->_n + rhs.getValue());
+  return XXX( this->_n + rhs.getValue());
 }
 
 //  Stream Redirection Operator
