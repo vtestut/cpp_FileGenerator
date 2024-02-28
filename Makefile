@@ -20,7 +20,7 @@ clean:
 	@rm -rf ${OBJDIR}		
 
 fclean: clean
-	@if [ -f ${NAME} ]; then rm -r ${NAME}; fi
+	@if [ -f ${NAME} ]; then rm ${NAME}; fi
 	@if [ -d "output" ]; then rm -r output; fi
 	@echo "fclean success"
 
