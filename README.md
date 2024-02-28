@@ -11,21 +11,19 @@
 &emsp;
 1.  Télécharger ou déplacer le repo dans le dossier /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
 
-2. Ouvrir le fichier genfile.sh et modifier la variable SOURCES_PATH pour qu'elle pointe vers :
+2. Ouvrir le fichier genfile.sh et modifier la variable MY_LOGIN avec votre login 42 
 
-    - /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
-
-4. Exécuter la commande suivante :
+3. Exécuter la commande suivante :
 
        nano ~/.zsrhc
 
-6. A la fin du fichier, ajouter la ligne suivante pour configurer un alias :
+4. A la fin du fichier, ajouter la ligne suivante pour configurer un alias :
 
        alias genfile='/sgoinfre/goinfre/Perso/<VOTRE_LOGIN_42>/cpp_FileGenerator/genfile.sh'
 
-8. Enregistrer et quitter l'éditeur avec ctrl+X, Y, Enter
+5. Enregistrer et quitter avec ctrl+X, Y, Enter
    
-9. Relancer un nouveau terminal ou exécuter la commande suivante :
+6. Relancer un nouveau terminal ou exécuter la commande suivante :
 
        source ~/.zsrhc
 
