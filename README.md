@@ -1,9 +1,8 @@
 # cpp_FileGenerator
 
-#### Generateur de fichier pour la piscine C++
+#### Générerateur automatique de fichier pour la piscine C++
 &emsp;
 
-Ce programme permet de générer des fichiers de code C++ de manière automatique.
 
 Vous pouvez personnaliser vos templates en modifiant les fichiers dans 'model'
 
