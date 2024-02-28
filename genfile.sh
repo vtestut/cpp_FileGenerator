@@ -12,7 +12,7 @@
 
 #!/bin/bash
 
-MY_LOGIN="login42"
+MY_LOGIN="vtestut"
 
 SOURCES_PATH="/sgoinfre/goinfre/Perso/$MY_LOGIN"
 
