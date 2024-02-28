@@ -39,7 +39,7 @@ Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suiv
 - `all` :&emsp;Crée les quatre types de fichiers (hpp, cpp, main et Makefile).
 - &emsp;⚠️&emsp;&emsp;`genfile make` : Crée un Makefile. ( pas de \<fileName\>, 1 seul arugment )
 
-Le programme la première lettre `fileName` en uppercase si ce n'est pas déjà le cas.
+Le programme passe la première lettre `fileName` en uppercase si ce n'est pas déjà le cas.
 &emsp;
 
 &emsp;
