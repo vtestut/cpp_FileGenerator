@@ -6,7 +6,7 @@
 /*   By: vtestut <vtestut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 02:49:54 by vtestut           #+#    #+#             */
-/*   Updated: 2024/02/28 22:00:36 by vtestut          ###   ########.fr       */
+/*   Updated: 2024/02/28 22:05:00 by vtestut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ void NewClass::_generateHeader(const std::string& path, const std::string& filen
 	}
 
 	outputFile << content;
-	std::cout << "Header file generated: " << filename << ".hpp" << std::endl;
+	std::cout << "File generated: " << filename << ".hpp" << std::endl;
 }
 
 
