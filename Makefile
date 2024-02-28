@@ -1,8 +1,14 @@
 NAME	= a.out
-CPP		= c++
-FLAGS	= -Wall -Wextra -Werror -std=c++17
+CXX		= c++
+
+FLAGS	=	-Wall
+FLAGS	+=	-Wextra
+FLAGS	+=	-Werror
+FLAGS	+=	-std=c++17
+
 SRCDIR	= sources
 OBJDIR	= objects
+
 SRCS	= $(wildcard $(SRCDIR)/*.cpp)
 HEADERS = $(wildcard $(SRCDIR)/*.hpp)
 OBJS	= $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS))
@@ -11,10 +17,10 @@ all: ${NAME}
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(HEADERS)
 	@mkdir -p $(OBJDIR)
-	$(CPP) $(FLAGS) -c $< -o $@
+	$(CXX) $(FLAGS) -c $< -o $@
 
 ${NAME}: ${OBJS}
-	$(CPP) $(FLAGS) ${OBJS} -o $@
+	$(CXX) $(FLAGS) ${OBJS} -o $@
 
 clean:
 	@rm -rf ${OBJDIR}		
