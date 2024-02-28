@@ -6,7 +6,16 @@
 /*						            PUBBLIC									  */
 /* ************************************************************************** */
 
-// ! ajouter des prototypes de pointeurs sur fonctions, sur references etc
+
+// type XXX:: () {
+
+// }
+
+
+/* ************************************************************************** */
+/*									PRIVATE									  */
+/* ************************************************************************** */
+
 
 // type XXX:: () {
 
@@ -52,15 +61,6 @@ int XXX::getValue(void) const {
 }
 
 /* ************************************************************************** */
-/*									PRIVATE									  */
-/* ************************************************************************** */
-
-
-// type XXX:: () {
-
-// }
-
-/* ************************************************************************** */
 /*				                OPERATOR OVERLOAD							  */
 /* ************************************************************************** */
 
@@ -88,26 +88,3 @@ std::ostream &  operator<<(std::ostream & out, XXX const & rhs) {
     out << rhs.getValue();
     return ( out );
 }
-
-/* ************************************************************************** */
-/*									TESTS									  */
-/* ************************************************************************** */
-
-// int main ( void )
-// {
-//     XXX x (30);
-//     XXX y (10);
-//     XXX z (0);
-
-//     std::cout << "x = " << x << std::endl; // stream redirection operator
-//     std::cout << "y = " << y << std::endl; // stream redirection operator
-//     y = XXX(12); // operator =
-//     std::cout << "y = " << y << std::endl; // stream redirection operator
-//     z = x + y; // operator +
-//     std::cout << "z = " << z << std::endl; // stream redirection operator
-
-//     XXX a(z); // assignation par copie
-//     std::cout << "a = " << a << std::endl; // stream redirection operator
-
-//     return ( 0 ); 
-// }
