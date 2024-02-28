@@ -7,6 +7,9 @@
 ⚠️&emsp;Vous pouvez personnaliser vos templates en modifiant les fichiers dans le dossier `Templates`
 
 &emsp;
+&emsp;Les classes respectent la forme canonique de Coplien
+
+&emsp;
 ## ⚙️&emsp;Installation ( à 42 )&emsp;⚙️
 &emsp;
 1.  Télécharger ou déplacer le repo dans le dossier /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
@@ -38,8 +41,6 @@ Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suiv
 - &emsp;⚠️&emsp;&emsp;`genfile make` : Crée un Makefile. ( pas de \<fileName\>, 1 seul arugment )
 
 Le programme passe la première lettre `fileName` en uppercase si ce n'est pas déjà le cas.
-&emsp;
-
 &emsp;
 ## 💡&emsp;Exemple&emsp;💡
 
