@@ -6,7 +6,7 @@
 /*   By: vtestut <vtestut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 02:49:54 by vtestut           #+#    #+#             */
-/*   Updated: 2024/02/28 19:49:15 by vtestut          ###   ########.fr       */
+/*   Updated: 2024/02/28 22:00:36 by vtestut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 /* ************************************************************************** */
 
 void NewClass::generateFiles(const std::string& className, int mod) {
-	std::string headerPath = "./model/header.txt";
-	std::string sourcePath = "./model/source.txt";
-	std::string makefilePath = "./model/makefile.txt";
-	std::string mainPath = "./model/main.txt";
+	std::string headerPath = "./templates/header.txt";
+	std::string sourcePath = "./templates/source.txt";
+	std::string makefilePath = "./templates/makefile.txt";
+	std::string mainPath = "./templates/main.txt";
 	std::string classCopie = className;
 	
 	if (!std::filesystem::exists("output")) {
