@@ -11,7 +11,7 @@
 &emsp;
 1.  Télécharger ou déplacer le repo dans le dossier /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
 
-2. Ouvrir le fichier genfile.sh et modifier la variable MY_LOGIN avec votre login 42 
+2. Ouvrir le fichier `genfile.sh` et modifier la variable `MY_LOGIN` avec votre `login42` 
 
 3. Exécuter la commande suivante :
 
