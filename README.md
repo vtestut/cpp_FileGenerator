@@ -24,7 +24,7 @@
 
        alias genfile='/sgoinfre/goinfre/Perso/<VOTRE_LOGIN_42>/cpp_FileGenerator/genfile.sh'
 
-5. Enregistrer et quitter avec ctrl+X, Y, Enter
+5. Enregistrer et quitter avec ctrl+X, Y, Entrer
    
 6. Relancer un nouveau terminal ou exécuter la commande suivante :
 
@@ -41,15 +41,17 @@ Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suiv
 - &emsp;⚠️&emsp;&emsp;`genfile make` : Crée un Makefile. ( pas de \<fileName\>, 1 seul arugment )
 
 Le programme passe la première lettre `fileName` en uppercase si ce n'est pas déjà le cas.
+
 &emsp;
+
 ## 💡&emsp;Exemple&emsp;💡
 
 Pour créer un fichier MaClasse, vous pouvez utiliser les commandes suivantes :
 
-    genfile maClasse c : Crée un fichier MaClasse.cpp.
-    genfile maClasse h : Crée des fichiers MaClasse.hpp et MaClasse.cpp.
-    genfile maClasse m : Crée un fichier main.cpp incluant #include "MaClasse.hpp".
-    genfile make : Crée un fichier Makefile.
+    genfile maClasse c   : Crée un fichier MaClasse.cpp.
+    genfile maClasse h   : Crée des fichiers MaClasse.hpp et MaClasse.cpp.
+    genfile maClasse m   : Crée un fichier main.cpp incluant #include "MaClasse.hpp".
+    genfile make         : Crée un fichier Makefile.
     genfile maClasse all : Crée tous les fichiers pour la classe MaClasse.
 
 ## Happy coding 🚀
