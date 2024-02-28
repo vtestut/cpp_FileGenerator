@@ -1,17 +1,24 @@
-NAME	= a.out
-CXX		= c++
+NAME	=	a.test
+CXX		=	c++
 
 FLAGS	=	-Wall
 FLAGS	+=	-Wextra
 FLAGS	+=	-Werror
-FLAGS	+=	-std=c++17
+FLAGS	+=	-std=c++98
 
-SRCDIR	= sources
-OBJDIR	= objects
+SRCDIR	=	.
+OBJDIR	=	objs
 
-SRCS	= $(wildcard $(SRCDIR)/*.cpp)
-HEADERS = $(wildcard $(SRCDIR)/*.hpp)
-OBJS	= $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS))
+SRCS	=	$(wildcard $(SRCDIR)/*.cpp)
+HEADERS =	$(wildcard $(SRCDIR)/*.hpp)
+
+OBJS	=	$(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS))
+
+
+#***************************************************#
+#*					RULES							#
+#***************************************************#
+
 
 all: ${NAME}
 
@@ -27,7 +34,6 @@ clean:
 
 fclean: clean
 	@if [ -f ${NAME} ]; then rm ${NAME}; fi
-	@if [ -d "output" ]; then rm -r output; fi
 	@echo "make fclean : done"
 
 re: fclean ${NAME}
@@ -35,9 +41,11 @@ re: fclean ${NAME}
 .PHONY: all clean fclean re
 
 
+
 #***************************************************#
 #*				AUTOMATIC VARIABLES					#
 #***************************************************#
+
 
 #*	$@ :	Le nom du fichier cible de la règle.
 #			Par exemple, dans la règle prog: main.o util.o, $@ serait prog.

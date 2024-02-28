@@ -3,8 +3,9 @@
 #ifndef XXX_HPP
 # define XXX_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
+//# include 
 
 /* ************************************************************************** */
 /*									DEFINES									  */
@@ -26,14 +27,14 @@ class XXX {
 
 public:
 
-	XXX(void);									// canonical
+	XXX(void);
 	XXX(int const p1);
-	XXX(XXX const & src);						// canonical
-	~XXX(void);									// canonical
+	XXX(XXX const & src);
+	~XXX(void);
 
 	int		getValue(void) const;
 
-	XXX &	operator=(XXX const & rhs);			// canonical
+	XXX &	operator=(XXX const & rhs);
 	XXX	operator+(XXX const & rhs) const;
 
 private:
@@ -41,6 +42,10 @@ private:
 	int _n;
 
 };
+
+/* ************************************************************************** */
+/*									PROTOYPES								  */
+/* ************************************************************************** */
 
 std::ostream &	operator<<(std::ostream & out, XXX const & i);
 
