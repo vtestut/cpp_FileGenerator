@@ -34,13 +34,22 @@
 ##  🛠️&emsp;Utilisation&emsp;🛠️
 &emsp;
 Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suivantes :
-- `c` :&emsp;&emsp;Crée un fichier .cpp.
-- `h` :&emsp;&emsp;Crée un fichier .hpp **ET** un fichier .cpp.
-- `m` :&emsp;&emsp;Crée un fichier main.cpp qui va \#include "\<fileName\>.hpp".
-- `all` :&emsp;Crée les quatre types de fichiers (hpp, cpp, main et Makefile).
-- &emsp;⚠️&emsp;&emsp;`genfile make` : Crée un Makefile. ( pas de \<fileName\>, 1 seul arugment )
+- `c`&emsp;&emsp;:&emsp;&emsp;Crée un fichier .cpp.
+- `h`&emsp;&emsp;:&emsp;&emsp;Crée un fichier .hpp **ET** un fichier .cpp.
+- `m`&emsp;&emsp;:&emsp;&emsp;Crée un fichier main.cpp qui va \#include "\<fileName\>.hpp".
+- `all`&emsp;:&emsp;&emsp;Crée les quatre types de fichiers (hpp, cpp, main et Makefile).
+- `make` :&emsp;&emsp; Crée un Makefile. ( ⚠️ `genfile make` , sans `fileName` ⚠️ )
+
+&emsp;
 
 Le programme passe la première lettre `fileName` en uppercase si ce n'est pas déjà le cas.
+
+&emsp;
+
+⚠️&emsp;Attention, en appelant genfile avec avec un nom de `fileName` qui existe déjà, ca va écraser et remplacer sans vous avertir 
+
+&emsp;&emsp;(par exemple, un Makefile).
+&emsp;
 
 &emsp;
 
@@ -54,6 +63,13 @@ Pour créer un fichier MaClasse, vous pouvez utiliser les commandes suivantes :
     genfile make         : Crée un fichier Makefile.
     genfile maClasse all : Crée tous les fichiers pour la classe MaClasse.
 
+#### Wanted Features
+
+- Ajouter une vérification pour check si un fichier du même nom existe déjà, puis demander au user s'il souhaite override.
+- Permettre de créer autant de fichiers que souhaité en une seule fois.
+- Pouvoir choisir entre plusieurs modèles de templates.
+
 ## Happy coding 🚀
 
 vtestut
+
