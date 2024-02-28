@@ -18,7 +18,7 @@
 
 3. Exécuter la commande suivante :
 
-       nano ~/.zsrhc
+       nano ~/.zshrc
 
 4. A la fin du fichier, ajouter la ligne suivante pour configurer un alias :
 
@@ -28,7 +28,7 @@
    
 6. Relancer un nouveau terminal ou exécuter la commande suivante :
 
-       source ~/.zsrhc
+       source ~/.zshrc
 
 &emsp;
 ##  🛠️&emsp;Utilisation&emsp;🛠️
