@@ -4,31 +4,31 @@
 &emsp;
 
 
-Vous pouvez personnaliser vos templates en modifiant les fichiers dans 'model'
+⚠️&emsp;Vous pouvez personnaliser vos templates en modifiant les fichiers dans le dossier `Templates`
 
 &emsp;
-## ⚙️&emsp;Installation ( à 42 )
+## ⚙️&emsp;Installation ( à 42 )&emsp;⚙️
 &emsp;
 1.  Télécharger ou déplacer le repo dans le dossier /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
 
-2. Ouvrir le fichier genfile.sh et modifier la variable SOURCES_PATH pour qu'elle pointe vers :
+2. Ouvrir le fichier `genfile.sh` et modifier la variable `MY_LOGIN` avec votre `login42` 
 
-    - /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
+3. Exécuter la commande suivante :
 
-4. En fonction de votre shell, exécuter la commande suivante : 
-    - `nano ~/.zsrhc`
-    - `nano ~/.bashrc`
+       nano ~/.zsrhc
 
-5. A la fin du fichier, ajouter la ligne suivante pour configurer un alias :
-    - `alias genfile='/sgoinfre/goinfre/Perso/<VOTRE_LOGIN_42>/cpp_FileGenerator/genfile.sh'`
+4. A la fin du fichier, ajouter la ligne suivante pour configurer un alias :
 
-6. Enregistrer et quitter l'éditeur avec ctrl+X, Y, Enter
+       alias genfile='/sgoinfre/goinfre/Perso/<VOTRE_LOGIN_42>/cpp_FileGenerator/genfile.sh'
+
+5. Enregistrer et quitter avec ctrl+X, Y, Enter
    
-7. Relancer un nouveau terminal ou exécuter la commande suivante :
-    - `source ~/.zsrhc`
+6. Relancer un nouveau terminal ou exécuter la commande suivante :
+
+       source ~/.zsrhc
 
 &emsp;
-##  🛠️&emsp;Utilisation
+##  🛠️&emsp;Utilisation&emsp;🛠️
 &emsp;
 Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suivantes :
 - `c` :&emsp;&emsp;Crée un fichier .cpp.
@@ -37,11 +37,11 @@ Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suiv
 - `all` :&emsp;Crée les quatre types de fichiers (hpp, cpp, main et Makefile).
 - &emsp;⚠️&emsp;&emsp;`genfile make` : Crée un Makefile. ( pas de \<fileName\>, 1 seul arugment )
 
-Le programme ajuste automatiquement la première lettre du nom de fichier pour la mettre en majuscule si ce n'est pas déjà le cas.
+Le programme passe la première lettre `fileName` en uppercase si ce n'est pas déjà le cas.
 &emsp;
 
 &emsp;
-## 💡&emsp;Exemple
+## 💡&emsp;Exemple&emsp;💡
 
 Pour créer un fichier MaClasse, vous pouvez utiliser les commandes suivantes :
 
