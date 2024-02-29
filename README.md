@@ -4,22 +4,26 @@
 &emsp;
 
 
-Vous pouvez personnaliser vos templates en modifiant les fichiers dans le dossier `Templates`
+Vous pouvez personnaliser vos fichiers dans le dossier `templates` 
 
 &emsp;
 ## ⚙️&emsp;Installation ( à 42 )&emsp;⚙️
 &emsp;
-1.  Télécharger ou déplacer le repo dans le dossier /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
+1. Télécharger ou déplacer le repo dans le dossier `/sgoinfre/goinfre/Perso/<login>` :
 
-2. Ouvrir `genfile.sh` et modifier la variable `MY_LOGIN` avec votre login 
+       cp -r cpp_FileGenerator /sgoinfre/goinfre/Perso/<login>
+   
 
-3. Modifier zshrc ou bashrc :
+3. Ouvrir `genfile.sh` et modifier `MY_LOGIN`
+   
+
+5. Modifier zshrc ou bashrc :
 
        nano ~/.zshrc
 
-&emsp;A la fin du fichier, ajouter votre login et copier l'alias :
+&emsp;A la fin du fichier, ajouter votre login et copier l'alias :&emsp;&emsp;*ctrl+X, Y, Entrer pour save*
 
-       alias genfile='/sgoinfre/goinfre/Perso/<VOTRE_LOGIN_42>/cpp_FileGenerator/genfile.sh'
+       alias genfile='/sgoinfre/goinfre/Perso/<LOGIN>/cpp_FileGenerator/genfile.sh'
   
 4. Quitter le terminal ou exécuter :
 
@@ -37,24 +41,14 @@ Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suiv
 
 &emsp;
 
-Le programme passe la première lettre `fileName` en uppercase si ce n'est pas déjà le cas.
-
+Le programme passe la première lettre de `fileName` en uppercase si ce n'est pas déjà le cas.
 &emsp;
 
-⚠️&emsp;Attention, en appelant genfile avec avec un nom de `fileName` qui existe déjà, ca va écraser et remplacer sans vous avertir 
+⚠️&emsp;En appelant genfile avec avec un nom de `fileName` qui existe déjà, ca va écraser et remplacer sans vous avertir
 
-&emsp;&emsp;(par exemple, un Makefile).
-&emsp;
 
-&emsp;
-
-## 💡&emsp;Exemple&emsp;💡
-
-Pour créer un fichier MaClasse, vous pouvez utiliser les commandes suivantes :
-
-    genfile maClasse c   : Crée un fichier MaClasse.cpp.
-    genfile maClasse h   : Crée des fichiers MaClasse.hpp et MaClasse.cpp.
-    genfile maClasse m   : Crée un fichier main.cpp incluant #include "MaClasse.hpp".
-    genfile make         : Crée un fichier Makefile.
-    genfile maClasse all : Crée tous les fichiers pour la classe MaClasse.
+    genfile maClasse c    crée MaClasse.cpp
+    genfile maClasse h    crée des fichiers MaClasse.hpp et MaClasse.cpp
+    genfile maClasse m    crée un fichier main.cpp qui #include "MaClasse.hpp"
+    genfile make          crée un Makefile
 
