@@ -3,67 +3,71 @@
 /*                                                        :::      ::::::::   */
 /*   NewClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vtestut <vtestut@student.42.fr>            +#+  +:+       +#+        */
+/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 02:49:54 by vtestut           #+#    #+#             */
-/*   Updated: 2024/02/28 22:05:00 by vtestut          ###   ########.fr       */
+/*   Created: 2024/02/25 02:51:48 by vtestut           #+#    #+#             */
+/*   Updated: 2024/02/29 04:57:30 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "NewClass.hpp"
 
-/* ************************************************************************** */
-/*									PUBLIC									  */
-/* ************************************************************************** */
-
-void NewClass::generateFiles(const std::string& className, int mod) {
+void NewClass::generateFiles(const std::string& className, int option) {
 	std::string headerPath = "./templates/header.txt";
 	std::string sourcePath = "./templates/source.txt";
 	std::string makefilePath = "./templates/makefile.txt";
 	std::string mainPath = "./templates/main.txt";
-	std::string classCopie = className;
+	std::string nameCopie = className;
 	
 	if (!std::filesystem::exists("output")) {
 		if (!std::filesystem::create_directory("output")) {
-			std::cerr << "Error: Unable to create directory 'output'\n";
+			std::cerr << "Error: Unable to create directory 'output'" << std::endl;
 			return;
 		}
 	} if (!std::filesystem::exists(headerPath)) {
-		std::cerr << "Error: Header directory '" << headerPath << "' does not exist\n";
+		std::cerr << "Error: '" << headerPath << "' does not exist" << std::endl;
 		return;
 	} if (!std::filesystem::exists(sourcePath)) {
-		std::cerr << "Error: Source directory '" << sourcePath << "' does not exist\n";
+		std::cerr << "Error: '" << sourcePath << "' does not exist" << std::endl;
 		return;
-	}  if (!std::filesystem::exists(sourcePath)) {
-		std::cerr << "Error: Source directory '" << sourcePath << "' does not exist\n";
+	} if (!std::filesystem::exists(makefilePath)) {
+		std::cerr << "Error: '" << makefilePath << "' does not exist" << std::endl;
+		return;
+	} if (!std::filesystem::exists(mainPath)) {
+		std::cerr << "Error: '" << mainPath << "' does not exist" << std::endl;
 		return;
 	} 
 	
-	_capitalizeFirstLetter(classCopie);
+	_capitalizeFirstLetter(nameCopie);
 	
-	const std::string& classConst = classCopie;
+	const std::string& nameConst = nameCopie;
 
-	if (mod == ALL) {
-		_generateHeader(headerPath, classConst);
-		_generateSource(sourcePath, classConst);
-		_generateMain(mainPath, classConst);
-		_generateMakefile(makefilePath, classConst);
-	} else if (mod == SRC) {
-		_generateSource(sourcePath, classConst);
-	} else if (mod == MAKE) {
-		_generateMakefile(makefilePath, classConst);
-	} else if (mod == MAIN) {
-		_generateMain(mainPath, classConst);
-	} else if (mod == HEADR) {
-		_generateHeader(headerPath, classConst);
-		_generateSource(sourcePath, classConst);
+	switch(option) {
+    case ALL:
+        _generateHeader(headerPath, nameConst);
+        _generateSource(sourcePath, nameConst);
+        _generateMain(mainPath, nameConst);
+        _generateMakefile(makefilePath, nameConst);
+        break;
+    case CPP:
+        _generateSource(sourcePath, nameConst);
+        break;
+    case MAKE:
+        _generateMakefile(makefilePath, nameConst);
+        break;
+    case MAIN:
+        _generateMain(mainPath, nameConst);
+        break;
+    case HPP:
+        _generateHeader(headerPath, nameConst);
+        _generateSource(sourcePath, nameConst);
+        break;
 	}
 }
 
-
-/* ************************************************************************** */
+/******************************************************************************/
 /*									PRIVATE									  */
-/* ************************************************************************** */
+/******************************************************************************/
 
 
 //!		Remplace toutes les occurrences de XXX par <filename>
@@ -96,7 +100,7 @@ void NewClass::_capitalizeFirstLetter(std::string& str) {
 void NewClass::_generateHeader(const std::string& path, const std::string& filename) {
 	std::ifstream inputFile(path);
 	if (!inputFile.is_open()) {
-		std::cerr << "Error: Unable to open file '" << path << "' for reading\n";
+		std::cerr << "Error: Unable to open file '" << path << "' for reading" << std::endl;
 		return;
 	}
 
@@ -115,7 +119,7 @@ void NewClass::_generateHeader(const std::string& path, const std::string& filen
 
 	std::ofstream outputFile("output/" + filename + ".hpp");
 	if (!outputFile.is_open()) {
-		std::cerr << "Error: Unable to create file 'output/" << filename << ".hpp' for writing\n";
+		std::cerr << "Error: Unable to create file 'output/" << filename << ".hpp' for writing" << std::endl;
 		return;
 	}
 
@@ -128,7 +132,7 @@ void NewClass::_generateHeader(const std::string& path, const std::string& filen
 void NewClass::_generateSource(const std::string& path, const std::string& filename) {
 	std::ifstream inputFile(path);
 	if (!inputFile.is_open()) {
-		std::cerr << "Error: Unable to open file '" << path << "' for reading\n";
+		std::cerr << "Error: Unable to open file '" << path << "' for reading" << std::endl;
 		return;
 	}
 
@@ -141,7 +145,7 @@ void NewClass::_generateSource(const std::string& path, const std::string& filen
 	
 	std::ofstream outputFile("output/" + filename + ".cpp");
 	if (!outputFile.is_open()) {
-		std::cerr << "Error: Unable to create file 'output/" << filename << ".cpp' for writing\n";
+		std::cerr << "Error: Unable to create file 'output/" << filename << ".cpp' for writing" << std::endl;
 		return;
 	}
 
@@ -155,7 +159,7 @@ void NewClass::_generateMakefile(const std::string& path, const std::string& fil
 	(void)filename;
 	std::ifstream inputFile(path);
 	if (!inputFile.is_open()) {
-		std::cerr << "Error: Unable to open file '" << path << "' for reading\n";
+		std::cerr << "Error: Unable to open file '" << path << "' for reading" << std::endl;
 		return;
 	}
 	
@@ -163,7 +167,7 @@ void NewClass::_generateMakefile(const std::string& path, const std::string& fil
 
 	std::ofstream outputFile("output/Makefile");
 	if (!outputFile.is_open()) {
-		std::cerr << "Error: Unable to create file 'output/Makefile' for writing\n";
+		std::cerr << "Error: Unable to create file 'output/Makefile' for writing" << std::endl;
 		return;
 	}
 
@@ -176,7 +180,7 @@ void NewClass::_generateMakefile(const std::string& path, const std::string& fil
 void NewClass::_generateMain(const std::string& path, const std::string& filename) {
 	std::ifstream inputFile(path);
 	if (!inputFile.is_open()) {
-		std::cerr << "Error: Unable to open file '" << path << "' for reading\n";
+		std::cerr << "Error: Unable to open file '" << path << "' for reading" << std::endl;
 		return;
 	}
 
@@ -189,7 +193,7 @@ void NewClass::_generateMain(const std::string& path, const std::string& filenam
 	
 	std::ofstream outputFile("output/main.cpp");
 	if (!outputFile.is_open()) {
-		std::cerr << "Error: Unable to create file 'output/main.cpp' for writing\n";
+		std::cerr << "Error: Unable to create file 'output/main.cpp' for writing" << std::endl;
 		return;
 	}
 

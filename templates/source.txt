@@ -1,72 +1,75 @@
-
-
 #include XXX
 
-/* ************************************************************************** */
-/*						            PUBBLIC									  */
-/* ************************************************************************** */
+/******************************************************************************/
+/*								PRIVATE										  */
+/******************************************************************************/
 
 
 // type XXX:: () {
-
 // }
 
 
-/* ************************************************************************** */
-/*									PRIVATE									  */
-/* ************************************************************************** */
+/******************************************************************************/
+/*								PUBLIC										  */
+/******************************************************************************/
 
 
 // type XXX:: () {
-
 // }
 
-/* ************************************************************************** */
-/*						    CONSTRUCTORS & DESTRUCTORS					      */
-/* ************************************************************************** */
+
+/******************************************************************************/
+/*						CONSTRUCTORS & DESTRUCTORS							  */
+/******************************************************************************/
 
 
-// Default Constructor
+//	Default Constructor
 XXX::XXX( void ) {}
 
-// Parametric Constructor
+//	Parametric Constructor
 XXX::XXX(int const p1) : _n(p1) {}
 
-//  Copy constructor
+//	Copy constructor
 XXX::XXX(XXX const & src) {
-    *this = src;
+	*this = src;
 }
-
-//  Default Destructor
+	
+//	Default Destructor
 XXX::~XXX( void ) {}
 
-/* ************************************************************************** */
-/*								GETTERS & SETTERS							  */
-/* ************************************************************************** */
 
-// Getter
-int XXX::getValue(void) const {
-    return this->_n;
+/******************************************************************************/
+/*							GETTERS & SETTERS								  */
+/******************************************************************************/
+
+
+int XXX::_getValue(void) const {
+	return this->_n;
 }
 
-/* ************************************************************************** */
-/*				                OPERATOR OVERLOAD							  */
-/* ************************************************************************** */
+void XXX::setValue(int const p1) {
+	this->_n = p1;
+}
 
 
-//  Assignation Operator
+/******************************************************************************/
+/*							OPERATOR OVERLOAD								  */
+/******************************************************************************/
+
+
+//	Assignation Operator
 XXX &   XXX::operator=(XXX const & rhs) {
-    this->_n = rhs.getValue();
-    return *this; // on dereference l'instence pour renvoyer une reference &
+	this->_n = rhs._getValue();
+	return *this;
 }
 
-//  Addition Operator
+//	Addition Operator
 XXX XXX::operator+(XXX const & rhs) const {
-  return XXX( this->_n + rhs.getValue());
+  return XXX( this->_n + rhs._getValue());
 }
 
-//  Stream Redirection Operator
-std::ostream &  operator<<(std::ostream & out, XXX const & rhs) {
-    out << rhs.getValue();
-    return ( out );
-}
+//	Stream Redirection Operator
+// std::ostream &  operator<<(std::ostream & out, XXX const & rhs) {
+//	out << rhs._getValue(); // passer getValue en public
+//	return ( out );
+//}

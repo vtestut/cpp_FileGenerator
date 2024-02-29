@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   NewClass.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vtestut <vtestut@student.42.fr>            +#+  +:+       +#+        */
+/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 02:47:32 by vtestut           #+#    #+#             */
-/*   Updated: 2024/02/28 19:52:06 by vtestut          ###   ########.fr       */
+/*   Updated: 2024/02/29 04:55:46 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,17 @@
 
 enum Mod {
     ALL = 1,
-    SRC = 2,
+    CPP = 2,
     MAKE = 3,
     MAIN = 4,
-    HEADR = 5,
-    ERR = 6
+    HPP = 5,
 };
 
 class NewClass {
 
 public:
 
-    void generateFiles(const std::string& className, int mod);
+    void generateFiles(const std::string& className, int option);
 
 private:
 

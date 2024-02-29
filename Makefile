@@ -9,9 +9,9 @@ FLAGS	+=	-std=c++17
 SRCDIR	= sources
 OBJDIR	= objects
 
-SRCS	= $(wildcard $(SRCDIR)/*.cpp)
+SOURCES	= $(wildcard $(SRCDIR)/*.cpp)
 HEADERS = $(wildcard $(SRCDIR)/*.hpp)
-OBJS	= $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS))
+OBJECTS	= $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SOURCES))
 
 all: ${NAME}
 
@@ -19,8 +19,8 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(HEADERS)
 	@mkdir -p $(OBJDIR)
 	$(CXX) $(FLAGS) -c $< -o $@
 
-${NAME}: ${OBJS}
-	$(CXX) $(FLAGS) ${OBJS} -o $@
+${NAME}: ${OBJECTS}
+	$(CXX) $(FLAGS) ${OBJECTS} -o $@
 
 clean:
 	@rm -rf ${OBJDIR}		
@@ -33,7 +33,6 @@ fclean: clean
 re: fclean ${NAME}
 
 .PHONY: all clean fclean re
-
 
 #***************************************************#
 #*				AUTOMATIC VARIABLES					#
