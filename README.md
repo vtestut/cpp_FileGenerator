@@ -4,29 +4,24 @@
 &emsp;
 
 
-⚠️&emsp;Vous pouvez personnaliser vos templates en modifiant les fichiers dans le dossier `Templates`
-
-&emsp;
-&emsp;Les classes respectent la forme canonique de Coplien
+Vous pouvez personnaliser vos templates en modifiant les fichiers dans le dossier `Templates`
 
 &emsp;
 ## ⚙️&emsp;Installation ( à 42 )&emsp;⚙️
 &emsp;
 1.  Télécharger ou déplacer le repo dans le dossier /sgoinfre/goinfre/Perso/***\<VOTRE_LOGIN_42\>***
 
-2. Ouvrir le fichier `genfile.sh` et modifier la variable `MY_LOGIN` avec votre `login42` 
+2. Ouvrir `genfile.sh` et modifier la variable `MY_LOGIN` avec votre login 
 
-3. Exécuter la commande suivante :
+3. Modifier zshrc ou bashrc :
 
        nano ~/.zshrc
 
-4. A la fin du fichier, ajouter la ligne suivante pour configurer un alias :
+&emsp;A la fin du fichier, ajouter votre login et copier l'alias :
 
        alias genfile='/sgoinfre/goinfre/Perso/<VOTRE_LOGIN_42>/cpp_FileGenerator/genfile.sh'
-
-5. Enregistrer et quitter avec ctrl+X, Y, Entrer
-   
-6. Relancer un nouveau terminal ou exécuter la commande suivante :
+  
+4. Quitter le terminal ou exécuter :
 
        source ~/.zshrc
 
@@ -62,16 +57,4 @@ Pour créer un fichier MaClasse, vous pouvez utiliser les commandes suivantes :
     genfile maClasse m   : Crée un fichier main.cpp incluant #include "MaClasse.hpp".
     genfile make         : Crée un fichier Makefile.
     genfile maClasse all : Crée tous les fichiers pour la classe MaClasse.
-
-#### Wanted Features
-
-- Ajouter une vérification pour check si un fichier du même nom existe déjà, puis demander au user s'il souhaite override.
-- Permettre de créer autant de fichiers que souhaité en une seule fois.
-- Pouvoir choisir entre plusieurs modèles de templates.
-- Directement intégrer l'en-tête 42 du user.
-- Une autre idée ? ou un truc à améliorer ? contact moi sur discord :)
-
-## Happy coding 🚀
-
-vtestut
 
