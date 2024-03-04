@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   NewClass.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
+/*   By: vtestut <vtestut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 02:47:32 by vtestut           #+#    #+#             */
-/*   Updated: 2024/02/29 04:55:46 by v                ###   ########.fr       */
+/*   Updated: 2024/03/04 17:44:35 by vtestut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NEWCLASS_HPP
-# define NEWCLASS_HPP
+#ifndef _NEWCLASS_HPP
+# define _NEWCLASS_HPP
 
 # include <iostream>
 # include <fstream>
@@ -20,8 +20,8 @@
 # include <iterator>
 
 # define INCLUD "#include XXX"
-# define IFNDEF "#ifndef XXX"
-# define DEFINE "# define XXX"
+# define IFNDEF "#ifndef  _XXX"
+# define DEFINE "# define _XXX"
 
 enum Mod {
     ALL = 1,

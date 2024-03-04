@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   NewClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
+/*   By: vtestut <vtestut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 02:51:48 by vtestut           #+#    #+#             */
-/*   Updated: 2024/02/29 04:57:30 by v                ###   ########.fr       */
+/*   Updated: 2024/03/04 17:43:54 by vtestut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,11 +106,15 @@ void NewClass::_generateHeader(const std::string& path, const std::string& filen
 
 	std::string ifndef = filename;
 	this->_toUpperCase(ifndef);
-	ifndef = "#ifndef _" + ifndef;
-
+	ifndef = "#ifndef  _" + ifndef;
+	
+	std::cout << ifndef << std::endl;
+	
 	std::string define = filename;
 	this->_toUpperCase(define);
 	define = "# define _" + define;
+
+	std::cout << define << std::endl;
 
 	std::string content((std::istreambuf_iterator<char>(inputFile)), (std::istreambuf_iterator<char>()));
 	_replaceAllOccurences(content, IFNDEF, ifndef);

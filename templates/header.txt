@@ -1,5 +1,5 @@
-#ifndef XXX_HPP
-# define XXX_HPP
+#ifndef  _XXX_HPP
+# define _XXX_HPP
 
 # include <iostream>
 # include <string>
