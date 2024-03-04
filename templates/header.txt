@@ -39,7 +39,7 @@ public:
 	void	setValue(int const p1);
 
 	XXX &	operator=(XXX const & rhs);
-	XXX	operator+(XXX const & rhs) const;	
+	XXX		operator+(XXX const & rhs) const;	
 
 };
 
