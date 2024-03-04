@@ -1,6 +1,6 @@
 # cpp_FileGenerator
 
-#### Générerateur automatique de fichier pour la piscine C++
+#### Générerateur de templates pour la piscine C++
 &emsp;
 
 
@@ -43,8 +43,6 @@ Exécuter la commande `genfile` suivi du `fileName` suivi d'une des options suiv
 
 Le programme passe la première lettre de `fileName` en uppercase si ce n'est pas déjà le cas.
 &emsp;
-
-⚠️&emsp;En appelant genfile avec avec un nom de `fileName` qui existe déjà, ca va écraser et remplacer sans vous avertir
 
 
     genfile maClasse c    crée MaClasse.cpp
